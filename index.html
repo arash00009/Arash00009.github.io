@@ -6,497 +6,488 @@
     <title>Arash Rahimi – Junior DevOps / Platform Engineer</title>
     <!-- Font Awesome för ikoner -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Akademisk Font (Serif) för namnet -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* ---- Global stil ---- */
+        /* ---- Global stil (Akademisk/Avskalad) ---- */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: #f4f7fb;
-            color: #0b1a2e;
+            font-family: 'Lato', system-ui, sans-serif;
+            background: #ffffff; /* Vit bakgrund som på många akademiska sidor */
+            color: #333333;
             line-height: 1.6;
-            padding: 2rem 1rem;
         }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 2rem;
-            padding: 2.5rem 3rem;
-            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.12);
-        }
-        /* ---- Header ---- */
-        .header {
+        
+        /* ---- Navigeringsfält (Zahras stil) ---- */
+        nav {
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+            padding: 0 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid #eef2f6;
-            padding-bottom: 1.5rem;
-            margin-bottom: 2rem;
+            height: 60px;
         }
-        .header-left h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-        .header-left .title {
-            font-size: 1.2rem;
-            color: #1e4a6b;
-            background: #e7edf4;
-            display: inline-block;
-            padding: 0.2rem 1.2rem;
-            border-radius: 40px;
-            margin-top: 0.2rem;
-        }
-        .header-right {
-            display: flex;
-            gap: 1.2rem;
-            font-size: 1.4rem;
-        }
-        .header-right a {
-            color: #1e4a6b;
-            transition: 0.2s;
-        }
-        .header-right a:hover {
-            color: #0b2c44;
-            transform: scale(1.05);
-        }
-        /* ---- Hero / Om mig ---- */
-        .hero {
-            background: #f1f6fa;
-            border-radius: 1.5rem;
-            padding: 2rem 2.5rem;
-            margin-bottom: 2.5rem;
-        }
-        .hero p {
-            font-size: 1.1rem;
-            color: #1f3347;
-        }
-        .hero .tagline {
-            font-size: 1.3rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            color: #0b1a2e;
-        }
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            margin-top: 1.2rem;
-        }
-        .btn {
-            background: white;
-            border: 1px solid #cbd5e1;
-            padding: 0.6rem 1.4rem;
-            border-radius: 40px;
-            font-weight: 500;
+        nav .nav-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #2c3e50;
             text-decoration: none;
-            color: #0b1a2e;
-            transition: 0.2s;
+            font-weight: 700;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
             font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
         }
-        .btn-primary {
-            background: #0b1a2e;
-            color: white;
-            border: 1px solid #0b1a2e;
+        nav ul li a:hover {
+            color: #0056b3;
         }
-        .btn-primary:hover {
-            background: #1e3a5f;
-            border-color: #1e3a5f;
+        nav .nav-icons a {
+            font-size: 1.2rem;
+            color: #333;
+            margin-left: 0.5rem;
         }
-        .btn-outline:hover {
-            background: #e7edf4;
+
+        /* ---- Main Container ---- */
+        .container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
         }
+
+        /* ---- Hero / About Me (Två kolumner som på Zahras sida) ---- */
+        .about-section {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            align-items: flex-start;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        .profile-image {
+            flex-shrink: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background-color: #eee; /* Placeholder färg */
+        }
+        .bio-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 0.2rem;
+            line-height: 1.2;
+        }
+        .bio-content .title-badge {
+            display: inline-block;
+            background: #e9ecef;
+            color: #495057;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+        .bio-content p {
+            font-size: 1.05rem;
+            color: #555;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        .bio-content .status-box {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-left: 4px solid #0056b3;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
         /* ---- Sektioner ---- */
         section {
             margin-bottom: 3rem;
         }
         .section-title {
+            font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .section-title i {
-            color: #1e4a6b;
-            font-size: 1.6rem;
-        }
-        /* ---- Kortgrid (för projekt, skills, cert) ---- */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.2rem;
-        }
-        .card {
-            background: #f8fafc;
-            border-radius: 1.2rem;
-            padding: 1.2rem 1.2rem;
-            border: 1px solid #eef2f6;
-            transition: 0.2s;
-        }
-        .card:hover {
-            border-color: #bccddb;
-            background: #f1f6fa;
-        }
-        .card h4 {
-            font-weight: 600;
-            font-size: 1.05rem;
-            margin-bottom: 0.3rem;
-        }
-        .card .meta {
-            font-size: 0.85rem;
-            color: #4b637a;
-        }
-        .card p {
-            font-size: 0.95rem;
-            color: #1f3347;
-        }
-        .badge {
-            display: inline-block;
-            background: #dce7f0;
-            padding: 0.15rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #1e4a6b;
-            margin-right: 0.3rem;
-            margin-top: 0.3rem;
-        }
-        /* ---- Certifikat (speciell layout) ---- */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.2rem;
-        }
-        .cert-item {
-            background: #f8fafc;
-            border: 1px solid #eef2f6;
-            border-radius: 1.2rem;
-            padding: 1rem 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
             display: flex;
             align-items: center;
             gap: 0.8rem;
         }
-        .cert-item i {
-            font-size: 2rem;
-            color: #1e4a6b;
-            width: 2.2rem;
-            text-align: center;
+        .section-title i {
+            color: #0056b3;
+            font-size: 1.4rem;
         }
-        .cert-info {
-            flex: 1;
+
+        /* ---- Erfarenhet (Tidslinje-stil istället för kort) ---- */
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid #e9ecef;
         }
-        .cert-info strong {
-            display: block;
+        .timeline-item:last-child {
+            border-left: 2px solid transparent; /* Dölj sista linjen */
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: #0056b3;
+            border-radius: 50%;
+        }
+        .timeline-item h4 {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 0.2rem;
+        }
+        .timeline-item .meta {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+        .timeline-item p {
             font-size: 0.95rem;
+            color: #444;
         }
-        .cert-info .issuer {
-            font-size: 0.8rem;
-            color: #4b637a;
+
+        /* ---- Grid (För projekt och skills) ---- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
         }
-        .cert-info .pdf-link {
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: #1e4a6b;
+        .card {
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+        }
+        .card h4 {
+            font-size: 1.05rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        .card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+        .card a {
+            color: #0056b3;
             text-decoration: none;
-            border-bottom: 1px dotted #b0c8da;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-top: 0.8rem;
+            display: inline-block;
         }
-        /* ---- Publikationer ---- */
-        .pub-item {
-            background: #f8fafc;
-            border-radius: 1rem;
-            padding: 1rem 1.5rem;
-            margin-bottom: 0.8rem;
-            border-left: 4px solid #1e4a6b;
+        .card a:hover {
+            text-decoration: underline;
         }
-        .pub-item strong {
+
+        /* ---- Utbildning ---- */
+        .edu-item {
+            margin-bottom: 1.5rem;
+        }
+        .edu-item h4 {
+            font-size: 1.05rem;
+            color: #2c3e50;
+            margin-bottom: 0.1rem;
+        }
+        .edu-item .meta {
+            font-size: 0.9rem;
+            color: #555;
             font-weight: 600;
         }
-        .pub-item .venue {
-            font-size: 0.9rem;
-            color: #4b637a;
+        .edu-item .sub-meta {
+            font-size: 0.85rem;
+            color: #888;
         }
-        /* ---- Kontakt ---- */
-        .contact-grid {
+
+        /* ---- Certifikat ---- */
+        .cert-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .cert-item {
+            font-size: 0.9rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #ddd;
             display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            background: #f1f6fa;
-            border-radius: 1.5rem;
-            padding: 1.8rem 2rem;
-            align-items: center;
             justify-content: space-between;
-        }
-        .contact-item {
-            display: flex;
             align-items: center;
-            gap: 0.6rem;
-            font-size: 1rem;
         }
-        .contact-item i {
-            font-size: 1.3rem;
-            color: #1e4a6b;
-            width: 1.8rem;
-        }
-        .contact-item a {
-            color: #0b1a2e;
+        .cert-item a {
+            color: #0056b3;
             text-decoration: none;
-            border-bottom: 1px dotted #b0c8da;
+            font-size: 0.8rem;
         }
-        .contact-item a:hover {
-            color: #1e3a5f;
-        }
-        .footer-note {
+
+        /* ---- Kontakt ---- */
+        .contact-box {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
             text-align: center;
-            margin-top: 2.5rem;
-            font-size: 0.9rem;
-            color: #6b7f94;
-            border-top: 1px solid #eef2f6;
-            padding-top: 1.8rem;
         }
+        .contact-box a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #333;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+        .contact-box a:hover {
+            color: #0056b3;
+        }
+
+        /* ---- Footer ---- */
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            font-size: 0.85rem;
+            color: #999;
+            border-top: 1px solid #eee;
+        }
+
         /* ---- Mobil ---- */
-        @media (max-width: 700px) {
-            .container {
-                padding: 1.2rem;
-            }
-            .header {
+        @media (max-width: 768px) {
+            nav {
                 flex-direction: column;
-                align-items: start;
+                height: auto;
+                padding: 1rem;
                 gap: 0.5rem;
             }
-            .header-left h1 {
-                font-size: 2rem;
+            nav ul {
+                gap: 1rem;
+                margin-top: 0.5rem;
             }
-            .hero {
-                padding: 1.5rem;
+            .about-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
             }
-            .section-title {
-                font-size: 1.5rem;
+            .bio-content p {
+                text-align: left;
+            }
+            .cert-list {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+    <!-- ===== NAVIGERING (Zahras stil) ===== -->
+    <nav>
+        <a href="#" class="nav-name">Arash Rahimi</a>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#erfarenhet">Erfarenhet</a></li>
+            <li><a href="#projekt">Projekt</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li class="nav-icons">
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:arash_rahimi92@hotmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </li>
+        </ul>
+    </nav>
 
-    <!-- ===== HEADER ===== -->
-    <header class="header">
-        <div class="header-left">
-            <h1>Arash Rahimi</h1>
-            <span class="title"><i class="fas fa-code" style="margin-right:6px;"></i> Junior DevOps / Platform Engineer</span>
-        </div>
-        <div class="header-right">
-            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
-        </div>
-    </header>
+    <div class="container">
 
-    <!-- ===== OM MIG ===== -->
-    <div class="hero">
-        <div class="tagline">🚀 Kubernetes · GitOps · Observability · Infrastructure as Code</div>
-        <p>
-            Jag bygger Kubernetes-plattformar som utvecklare faktiskt litar på — med samma strukturerade tänkande 
-            jag en gång använde för att guida människor genom komplexa myndighetssystem.
-        </p>
-        <div class="hero-actions">
-            <a href="#" class="btn btn-primary"><i class="fas fa-file-pdf"></i> Ladda ner CV</a>
-            <a href="#projekt" class="btn btn-outline"><i class="fas fa-project-diagram"></i> Se projekt</a>
-            <a href="#kontakt" class="btn btn-outline"><i class="fas fa-comment"></i> Kontakt</a>
-        </div>
-    </div>
-
-    <!-- ===== ERFARENHET ===== -->
-    <section>
-        <div class="section-title"><i class="fas fa-briefcase"></i> Erfarenhet</div>
-
-        <div class="card" style="background:#f1f6fa; border-left:5px solid #1e4a6b; border-radius:1.2rem; padding:1.2rem 1.8rem; margin-bottom:1rem;">
-            <h4>DevOps Engineer (Examensarbete &amp; LIA)</h4>
-            <div class="meta"><i class="fas fa-calendar-alt"></i> januari 2026 – maj 2026 · Cloudist AB, Malmö</div>
-            <p>
-                Designade och driftsatte en GitOps-driven Internal Developer Platform för observability på Kubernetes. 
-                Byggde full LGTM-stack (Prometheus, Loki, Tempo, Grafana) med FluxCD, Kustomize och Helm. 
-                Konfigurerade säker extern åtkomst (Traefik + cert-manager) och multi-miljösetup. 
-                Dokumenterade hela lösningen i en 63-sidig teknisk uppsats.
-            </p>
-        </div>
-
-        <div class="card" style="background:#f8fafc; border-left:5px solid #b0c8da; border-radius:1.2rem; padding:1.2rem 1.8rem; margin-bottom:1rem;">
-            <h4>Studie- och karriärvägledare / Arbetsmarknadskoordinator</h4>
-            <div class="meta"><i class="fas fa-calendar-alt"></i> augusti 2022 – juli 2023 · Alvesta kommun</div>
-            <p>Vägledning av ungdomar och vuxna, samverkan med Arbetsförmedlingen, CSN och YH-myndigheten.</p>
-        </div>
-
-        <div class="card" style="background:#f8fafc; border-left:5px solid #b0c8da; border-radius:1.2rem; padding:1.2rem 1.8rem; margin-bottom:1rem;">
-            <h4>Studie- och karriärvägledare</h4>
-            <div class="meta"><i class="fas fa-calendar-alt"></i> 2020 – 2022 · Uppvidinge kommun</div>
-            <p>Individuella studieplaner för vuxenutbildning, IM och SFI.</p>
-        </div>
-
-        <div class="card" style="background:#f8fafc; border-left:5px solid #b0c8da; border-radius:1.2rem; padding:1.2rem 1.8rem;">
-            <h4>Praktikant, Social hållbarhet</h4>
-            <div class="meta"><i class="fas fa-calendar-alt"></i> 2019 – 2020 · Länsstyrelsen Kronoberg</div>
-            <p>Kvalitativ uppföljningsstudie av samhällsorientering för nyanlända.</p>
-        </div>
-    </section>
-
-    <!-- ===== PROJEKT ===== -->
-    <section id="projekt">
-        <div class="section-title"><i class="fas fa-code-branch"></i> Projekt</div>
-        <div class="grid">
-            <div class="card">
-                <h4>Internal Developer Platform</h4>
-                <p>Examensarbete på Cloudist AB. GitOps-driven observability-plattform på Kubernetes (FluxCD, Helm, Kustomize, LGTM-stack).</p>
-                <a href="#" class="badge" style="text-decoration:none;">GitHub →</a>
-            </div>
-            <div class="card">
-                <h4>Terraform + Kubernetes Platform</h4>
-                <p>Egenbyggd plattform med modulär Infrastructure as Code och GitOps-leverans.</p>
-                <a href="#" class="badge" style="text-decoration:none;">GitHub →</a>
-            </div>
-            <div class="card">
-                <h4>Guestbook CI/CD</h4>
-                <p>Three-tier app (Nginx, Golang, PostgreSQL, Redis) med multi-stage builds, Secrets, PVC, HPA och CI/CD.</p>
-                <a href="#" class="badge" style="text-decoration:none;">GitHub →</a>
+        <!-- ===== ABOUT ME (Zahras layout) ===== -->
+        <div class="about-section" id="about">
+            <!-- BYT UT DENNA URL MOT DIN EGNA BILD -->
+            <img src="DIN_BILD_URL_HÄR.jpg" alt="Arash Rahimi" class="profile-image">
+            
+            <div class="bio-content">
+                <h1>Arash Rahimi</h1>
+                <div class="title-badge">Junior DevOps / Platform Engineer</div>
+                
+                <p>
+                    Jag bygger Kubernetes-plattformar som utvecklare faktiskt litar på — med samma strukturerade tänkande 
+                    jag en gång använde för att guida människor genom komplexa myndighetssystem. Min bakgrund som sociolog 
+                    ger mig en unik förståelse för organisatorisk kultur och förändringsledning, vilket jag nu kombinerar 
+                    med teknisk automatisering.
+                </p>
+                
+                <div class="status-box">
+                    <i class="fas fa-briefcase"></i> <strong>Öppen för möjligheter:</strong> Junior DevOps, Platform Engineer eller SRE-roller i Sverige, Norden och EU.
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- ===== SKILLS ===== -->
-    <section>
-        <div class="section-title"><i class="fas fa-cogs"></i> Skills</div>
-        <div class="grid">
-            <div class="card">
-                <h4>Containers &amp; Orchestration</h4>
-                <p>Kubernetes · Docker · Podman · OpenShift · Helm</p>
-            </div>
-            <div class="card">
-                <h4>GitOps &amp; IaC</h4>
-                <p>FluxCD · ArgoCD · Terraform · Kustomize · Git</p>
-            </div>
-            <div class="card">
-                <h4>Observability</h4>
-                <p>Prometheus · Grafana · Loki · Tempo</p>
-            </div>
-            <div class="card">
-                <h4>Cloud &amp; OS</h4>
-                <p>Linux (RHEL) · AWS · Azure · Bash · YAML</p>
-            </div>
-        </div>
-    </section>
+        <!-- ===== ERFARENHET (Tidslinje-stil) ===== -->
+        <section id="erfarenhet">
+            <div class="section-title"><i class="fas fa-briefcase"></i> Professionell Erfarenhet</div>
 
-    <!-- ===== UTBILDNING & CERTIFIKAT ===== -->
-    <section>
-        <div class="section-title"><i class="fas fa-graduation-cap"></i> Utbildning &amp; Certifikat</div>
-        <div style="margin-bottom:1.5rem;">
-            <div class="card" style="border-left:5px solid #1e4a6b; border-radius:1.2rem; padding:1.2rem 1.8rem; background:#f8fafc;">
+            <div class="timeline-item">
+                <h4>DevOps Engineer (Examensarbete & LIA)</h4>
+                <div class="meta">januari 2026 – maj 2026 · Cloudist AB, Malmö</div>
+                <p>Designade och driftsatte en GitOps-driven Internal Developer Platform för observability på Kubernetes. Byggde full LGTM-stack (Prometheus, Loki, Tempo, Grafana) med FluxCD, Kustomize och Helm. Konfigurerade säker extern åtkomst (Traefik + cert-manager) och multi-miljösetup.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h4>Studie- och karriärvägledare / Arbetsmarknadskoordinator</h4>
+                <div class="meta">augusti 2022 – juli 2023 · Alvesta kommun</div>
+                <p>Vägledning av ungdomar och vuxna, samverkan med Arbetsförmedlingen, CSN och YH-myndigheten.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h4>Studie- och karriärvägledare</h4>
+                <div class="meta">2020 – 2022 · Uppvidinge kommun</div>
+                <p>Individuella studieplaner för vuxenutbildning, IM och SFI.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h4>Praktikant, Social hållbarhet</h4>
+                <div class="meta">2019 – 2020 · Länsstyrelsen Kronoberg</div>
+                <p>Kvalitativ uppföljningsstudie av samhällsorientering för nyanlända.</p>
+            </div>
+        </section>
+
+        <!-- ===== PROJEKT ===== -->
+        <section id="projekt">
+            <div class="section-title"><i class="fas fa-code-branch"></i> Projekt</div>
+            <div class="grid">
+                <div class="card">
+                    <h4>Internal Developer Platform</h4>
+                    <p>Examensarbete på Cloudist AB. GitOps-driven observability-plattform på Kubernetes (FluxCD, Helm, Kustomize, LGTM-stack).</p>
+                    <a href="#">Visa på GitHub →</a>
+                </div>
+                <div class="card">
+                    <h4>Terraform + Kubernetes Platform</h4>
+                    <p>Egenbyggd plattform med modulär Infrastructure as Code och GitOps-leverans.</p>
+                    <a href="#">Visa på GitHub →</a>
+                </div>
+                <div class="card">
+                    <h4>Guestbook CI/CD</h4>
+                    <p>Three-tier app (Nginx, Golang, PostgreSQL, Redis) med multi-stage builds, Secrets, PVC, HPA och CI/CD.</p>
+                    <a href="#">Visa på GitHub →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section>
+            <div class="section-title"><i class="fas fa-cogs"></i> Tekniska Färdigheter</div>
+            <div class="grid">
+                <div class="card">
+                    <h4>Containers & Orchestration</h4>
+                    <p>Kubernetes · Docker · Podman · OpenShift · Helm</p>
+                </div>
+                <div class="card">
+                    <h4>GitOps & IaC</h4>
+                    <p>FluxCD · ArgoCD · Terraform · Kustomize · Git</p>
+                </div>
+                <div class="card">
+                    <h4>Observability</h4>
+                    <p>Prometheus · Grafana · Loki · Tempo</p>
+                </div>
+                <div class="card">
+                    <h4>Cloud & OS</h4>
+                    <p>Linux (RHEL) · AWS · Azure · Bash · YAML</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== UTBILDNING & CERTIFIKAT ===== -->
+        <section>
+            <div class="section-title"><i class="fas fa-graduation-cap"></i> Utbildning</div>
+            
+            <div class="edu-item">
                 <h4>Yrkeshögskoleexamen, DevOps Engineer</h4>
-                <div class="meta">Lernia Yrkeshögskola · 2024–2026 · 400 YH-poäng</div>
+                <div class="meta">Lernia Yrkeshögskola</div>
+                <div class="sub-meta">2024–2026 · 400 YH-poäng</div>
             </div>
-            <div class="card" style="border-left:5px solid #b0c8da; border-radius:1.2rem; padding:1.2rem 1.8rem; background:#f8fafc; margin-top:0.8rem;">
+            <div class="edu-item">
                 <h4>Fil.kand. Sociologi</h4>
-                <div class="meta">Linnéuniversitetet · 2017–2020</div>
+                <div class="meta">Linnéuniversitetet</div>
+                <div class="sub-meta">2017–2020</div>
             </div>
-        </div>
 
-        <h4 style="margin-bottom:0.8rem;"><i class="fas fa-certificate"></i> Certifikat</h4>
-        <div class="cert-grid">
-            <div class="cert-item">
-                <i class="fas fa-server"></i>
-                <div class="cert-info">
-                    <strong>Red Hat System Administration II (RH134)</strong>
-                    <span class="issuer">Red Hat</span>
-                    <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i> PDF</a>
+            <h4 style="margin: 2rem 0 1rem 0; font-size: 1.2rem; color: #2c3e50;"><i class="fas fa-certificate"></i> Certifikat</h4>
+            <div class="cert-list">
+                <div class="cert-item">Red Hat System Administration II (RH134) <a href="#">PDF</a></div>
+                <div class="cert-item">Red Hat OpenShift Development I (DO188) <a href="#">PDF</a></div>
+                <div class="cert-item">Red Hat OpenShift Administration I (DO180) <a href="#">PDF</a></div>
+                <div class="cert-item">AWS Academy Cloud Foundations <a href="#">PDF</a></div>
+                <div class="cert-item">Red Hat Academy – Program Learner <a href="#">PDF</a></div>
+            </div>
+        </section>
+
+        <!-- ===== PUBLIKATIONER ===== -->
+        <section>
+            <div class="section-title"><i class="fas fa-book-open"></i> Publikationer</div>
+            <div class="timeline-item" style="border-left-color: #555;">
+                <h4>Det finns nackdelar med friheten</h4>
+                <div class="meta">Linnéuniversitetet · 2020</div>
+                <p>Kvalitativ studie av hur samhällskommunikatörer i sex kommuner tolkar lagen om samhällsorientering för nyanlända.</p>
+            </div>
+        </section>
+
+        <!-- ===== KONTAKT ===== -->
+        <section id="kontakt">
+            <div class="section-title"><i class="fas fa-address-card"></i> Kontakt</div>
+            <div class="contact-box">
+                <p style="margin-bottom: 1rem; color: #555;">Ladda gärna ner mitt CV eller kontakta mig via sociala medier.</p>
+                <div style="margin-bottom: 1.5rem;">
+                    <a href="#" class="btn" style="background:#0056b3; color:white; padding:0.6rem 1.5rem; border-radius:4px; text-decoration:none;"><i class="fas fa-file-pdf"></i> Ladda ner CV</a>
+                </div>
+                <div>
+                    <a href="mailto:arash_rahimi92@hotmail.com"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i> Sverige</a>
                 </div>
             </div>
-            <div class="cert-item">
-                <i class="fas fa-cloud"></i>
-                <div class="cert-info">
-                    <strong>Red Hat OpenShift Development I (DO188)</strong>
-                    <span class="issuer">Red Hat</span>
-                    <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                </div>
-            </div>
-            <div class="cert-item">
-                <i class="fas fa-cloud-upload-alt"></i>
-                <div class="cert-info">
-                    <strong>Red Hat OpenShift Administration I (DO180)</strong>
-                    <span class="issuer">Red Hat</span>
-                    <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                </div>
-            </div>
-            <div class="cert-item">
-                <i class="fas fa-aws"></i>
-                <div class="cert-info">
-                    <strong>AWS Academy Cloud Foundations</strong>
-                    <span class="issuer">AWS</span>
-                    <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                </div>
-            </div>
-            <div class="cert-item">
-                <i class="fas fa-linux"></i>
-                <div class="cert-info">
-                    <strong>Red Hat Academy – Program Learner</strong>
-                    <span class="issuer">Red Hat</span>
-                    <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                </div>
-            </div>
-        </div>
-        <p style="margin-top:0.5rem; font-size:0.85rem; color:#4b637a;">
-            <i class="fas fa-info-circle"></i> RH134 Certificate (PDF) · Red Hat Academy Badge (PDF)
-        </p>
-    </section>
+        </section>
 
-    <!-- ===== PUBLIKATIONER ===== -->
-    <section>
-        <div class="section-title"><i class="fas fa-book-open"></i> Publikationer</div>
-        <div class="pub-item">
-            <strong>Det finns nackdelar med friheten</strong>
-            <div class="venue">Linnéuniversitetet · 2020</div>
-            <p style="margin-top:0.3rem; font-size:0.95rem; color:#1f3347;">
-                Kvalitativ studie av hur samhällskommunikatörer i sex kommuner tolkar lagen om samhällsorientering för nyanlända.
-            </p>
-        </div>
-    </section>
-
-    <!-- ===== CV ===== -->
-    <section>
-        <div class="section-title"><i class="fas fa-file-alt"></i> CV</div>
-        <p>Ladda ner mitt CV:</p>
-        <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:0.5rem;">
-            <a href="#" class="btn btn-primary"><i class="fas fa-file-pdf"></i> CV Svenska (PDF)</a>
-            <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf"></i> CV English (PDF)</a>
-        </div>
-    </section>
-
-    <!-- ===== KONTAKT ===== -->
-    <section id="kontakt">
-        <div class="section-title"><i class="fas fa-address-card"></i> Kontakt</div>
-        <div class="contact-grid">
-            <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:arash_rahimi92@hotmail.com">arash_rahimi92@hotmail.com</a></div>
-            <div class="contact-item"><i class="fab fa-linkedin-in"></i> <a href="#">LinkedIn</a></div>
-            <div class="contact-item"><i class="fab fa-github"></i> <a href="#">GitHub</a></div>
-            <div class="contact-item"><i class="fas fa-map-pin"></i> Sverige</div>
-        </div>
-        <p style="margin-top:1.2rem; font-size:0.95rem;">
-            <i class="fas fa-handshake"></i> Öppen för Junior DevOps, Platform Engineer eller SRE-roller i Sverige, Norden och EU.
-        </p>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <div class="footer-note">
-        © 2026 Arash Rahimi
     </div>
 
-</div>
-<!-- slut container -->
+    <footer>
+        © 2026 Arash Rahimi — Design inspirerad av akademisk mallstil.
+    </footer>
 
 </body>
 </html>
