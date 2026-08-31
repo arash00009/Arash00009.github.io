@@ -2,35 +2,33 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Zahra Asghari Varzaneh | AI-forskare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arash Rahimi – Junior DevOps / Platform Engineer</title>
     <!-- Font Awesome för ikoner -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
+        /* ---- Global stil ---- */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: #f8fafc;
+            background: #f4f7fb;
             color: #0b1a2e;
             line-height: 1.6;
             padding: 2rem 1rem;
         }
-
         .container {
             max-width: 1100px;
             margin: 0 auto;
             background: white;
             border-radius: 2rem;
-            padding: 2rem 2.5rem;
-            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.1);
+            padding: 2.5rem 3rem;
+            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.12);
         }
-
-        /* ===== HEADER ===== */
+        /* ---- Header ---- */
         .header {
             display: flex;
             flex-wrap: wrap;
@@ -40,30 +38,25 @@
             padding-bottom: 1.5rem;
             margin-bottom: 2rem;
         }
-
         .header-left h1 {
-            font-size: 2.6rem;
+            font-size: 2.8rem;
             font-weight: 700;
             letter-spacing: -0.02em;
-            color: #0b1a2e;
         }
-
         .header-left .title {
             font-size: 1.2rem;
             color: #1e4a6b;
             background: #e7edf4;
             display: inline-block;
-            padding: 0.2rem 1rem;
+            padding: 0.2rem 1.2rem;
             border-radius: 40px;
-            margin-top: 0.25rem;
+            margin-top: 0.2rem;
         }
-
         .header-right {
             display: flex;
-            gap: 1rem;
-            font-size: 1.3rem;
+            gap: 1.2rem;
+            font-size: 1.4rem;
         }
-
         .header-right a {
             color: #1e4a6b;
             transition: 0.2s;
@@ -72,43 +65,29 @@
             color: #0b2c44;
             transform: scale(1.05);
         }
-
-        /* ===== HERO / KORT OM MIG ===== */
+        /* ---- Hero / Om mig ---- */
         .hero {
             background: #f1f6fa;
             border-radius: 1.5rem;
-            padding: 2rem 2.2rem;
+            padding: 2rem 2.5rem;
             margin-bottom: 2.5rem;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 1.5rem;
         }
-
-        .hero-text {
-            flex: 2;
-            min-width: 240px;
-        }
-
-        .hero-text p {
+        .hero p {
             font-size: 1.1rem;
             color: #1f3347;
         }
-
-        .hero-text .tagline {
+        .hero .tagline {
             font-size: 1.3rem;
             font-weight: 500;
             margin-bottom: 0.5rem;
             color: #0b1a2e;
         }
-
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 0.8rem;
-            margin-top: 1rem;
+            margin-top: 1.2rem;
         }
-
         .btn {
             background: white;
             border: 1px solid #cbd5e1;
@@ -120,7 +99,6 @@
             transition: 0.2s;
             font-size: 0.95rem;
         }
-
         .btn-primary {
             background: #0b1a2e;
             color: white;
@@ -130,67 +108,55 @@
             background: #1e3a5f;
             border-color: #1e3a5f;
         }
-
         .btn-outline:hover {
             background: #e7edf4;
         }
-
-        /* ===== SEKTIONSGEMENSAMT ===== */
+        /* ---- Sektioner ---- */
         section {
             margin-bottom: 3rem;
         }
-
         .section-title {
             font-size: 1.8rem;
             font-weight: 600;
             margin-bottom: 1.2rem;
-            letter-spacing: -0.01em;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
-
         .section-title i {
             color: #1e4a6b;
             font-size: 1.6rem;
         }
-
-        .card-grid {
+        /* ---- Kortgrid (för projekt, skills, cert) ---- */
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
         }
-
         .card {
             background: #f8fafc;
             border-radius: 1.2rem;
-            padding: 1.4rem 1.2rem;
+            padding: 1.2rem 1.2rem;
             border: 1px solid #eef2f6;
             transition: 0.2s;
         }
-
         .card:hover {
             border-color: #bccddb;
             background: #f1f6fa;
         }
-
         .card h4 {
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             margin-bottom: 0.3rem;
         }
-
         .card .meta {
             font-size: 0.85rem;
             color: #4b637a;
-            margin-bottom: 0.4rem;
         }
-
         .card p {
             font-size: 0.95rem;
             color: #1f3347;
         }
-
         .badge {
             display: inline-block;
             background: #dce7f0;
@@ -202,23 +168,12 @@
             margin-right: 0.3rem;
             margin-top: 0.3rem;
         }
-
-        .link-icon {
-            color: #1e4a6b;
-            margin-left: 0.3rem;
-            font-size: 0.9rem;
-        }
-        .link-icon:hover {
-            color: #0b2c44;
-        }
-
-        /* ===== CERTIFIKAT ===== */
+        /* ---- Certifikat (speciell layout) ---- */
         .cert-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1.2rem;
         }
-
         .cert-item {
             background: #f8fafc;
             border: 1px solid #eef2f6;
@@ -227,35 +182,24 @@
             display: flex;
             align-items: center;
             gap: 0.8rem;
-            transition: 0.15s;
         }
-
-        .cert-item:hover {
-            border-color: #b0c8da;
-            background: #f1f6fa;
-        }
-
         .cert-item i {
             font-size: 2rem;
             color: #1e4a6b;
             width: 2.2rem;
             text-align: center;
         }
-
         .cert-info {
             flex: 1;
         }
-
         .cert-info strong {
             display: block;
             font-size: 0.95rem;
         }
-
         .cert-info .issuer {
             font-size: 0.8rem;
             color: #4b637a;
         }
-
         .cert-info .pdf-link {
             font-size: 0.75rem;
             font-weight: 500;
@@ -263,8 +207,7 @@
             text-decoration: none;
             border-bottom: 1px dotted #b0c8da;
         }
-
-        /* ===== PUBLIKATIONER ===== */
+        /* ---- Publikationer ---- */
         .pub-item {
             background: #f8fafc;
             border-radius: 1rem;
@@ -272,17 +215,14 @@
             margin-bottom: 0.8rem;
             border-left: 4px solid #1e4a6b;
         }
-
         .pub-item strong {
             font-weight: 600;
         }
-
         .pub-item .venue {
             font-size: 0.9rem;
             color: #4b637a;
         }
-
-        /* ===== KONTAKT ===== */
+        /* ---- Kontakt ---- */
         .contact-grid {
             display: flex;
             flex-wrap: wrap;
@@ -293,20 +233,17 @@
             align-items: center;
             justify-content: space-between;
         }
-
         .contact-item {
             display: flex;
             align-items: center;
             gap: 0.6rem;
             font-size: 1rem;
         }
-
         .contact-item i {
             font-size: 1.3rem;
             color: #1e4a6b;
             width: 1.8rem;
         }
-
         .contact-item a {
             color: #0b1a2e;
             text-decoration: none;
@@ -315,7 +252,6 @@
         .contact-item a:hover {
             color: #1e3a5f;
         }
-
         .footer-note {
             text-align: center;
             margin-top: 2.5rem;
@@ -324,8 +260,7 @@
             border-top: 1px solid #eef2f6;
             padding-top: 1.8rem;
         }
-
-        /* ===== MOBIL ===== */
+        /* ---- Mobil ---- */
         @media (max-width: 700px) {
             .container {
                 padding: 1.2rem;
@@ -344,9 +279,6 @@
             .section-title {
                 font-size: 1.5rem;
             }
-            .cert-item {
-                flex-wrap: wrap;
-            }
         }
     </style>
 </head>
@@ -354,155 +286,213 @@
 
 <div class="container">
 
-    <!-- ========== HEADER ========== -->
+    <!-- ===== HEADER ===== -->
     <header class="header">
         <div class="header-left">
-            <h1>Zahra Asghari Varzaneh</h1>
-            <span class="title"><i class="fas fa-robot" style="margin-right: 6px;"></i> AI-forskare · Postdoktor</span>
+            <h1>Arash Rahimi</h1>
+            <span class="title"><i class="fas fa-code" style="margin-right:6px;"></i> Junior DevOps / Platform Engineer</span>
         </div>
         <div class="header-right">
             <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            <a href="#" title="Kontakt"><i class="fas fa-envelope"></i></a>
+            <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </header>
 
-    <!-- ========== HERO ========== -->
+    <!-- ===== OM MIG ===== -->
     <div class="hero">
-        <div class="hero-text">
-            <div class="tagline">🤖 Pålitlig AI · Förklarbar maskininlärning · Forskning med effekt</div>
-            <p>
-                Jag är en AI-forskare med doktorsexamen i datavetenskap (Shahid Bahonar University, 2023). 
-                Nu som postdoktor vid <strong>Malmö Universitet</strong> fokuserar jag på 
-                <strong>förklarbar AI (XAI)</strong> och <strong>pålitlig maskininlärning</strong> – 
-                för att tekniken ska vara etisk, robust och transparent.
-            </p>
-            <div class="hero-actions">
-                <a href="#" class="btn btn-primary"><i class="fas fa-file-pdf"></i> Ladda ner CV</a>
-                <a href="#projekt" class="btn btn-outline"><i class="fas fa-project-diagram"></i> Se projekt</a>
-                <a href="#kontakt" class="btn btn-outline"><i class="fas fa-comment"></i> Kontakt</a>
-            </div>
+        <div class="tagline">🚀 Kubernetes · GitOps · Observability · Infrastructure as Code</div>
+        <p>
+            Jag bygger Kubernetes-plattformar som utvecklare faktiskt litar på — med samma strukturerade tänkande 
+            jag en gång använde för att guida människor genom komplexa myndighetssystem.
+        </p>
+        <div class="hero-actions">
+            <a href="#" class="btn btn-primary"><i class="fas fa-file-pdf"></i> Ladda ner CV</a>
+            <a href="#projekt" class="btn btn-outline"><i class="fas fa-project-diagram"></i> Se projekt</a>
+            <a href="#kontakt" class="btn btn-outline"><i class="fas fa-comment"></i> Kontakt</a>
         </div>
-        <!-- Du kan lägga till en bild/avatar här om du vill -->
-        <!-- <div style="flex:0 0 100px;"> <img src="avatar.jpg" style="border-radius:50%; width:100px;"> </div> -->
     </div>
 
-    <!-- ========== RESEARCH INTERESTS ========== -->
-    <section>
-        <div class="section-title"><i class="fas fa-microscope"></i> Forskningsintressen</div>
-        <div class="card-grid">
-            <div class="card"><i class="fas fa-brain" style="font-size:1.8rem; color:#1e4a6b;"></i><h4>Explainable AI (XAI)</h4><p>Modeller som förklarar sina beslut – för transparens och tillit.</p></div>
-            <div class="card"><i class="fas fa-shield-alt" style="font-size:1.8rem; color:#1e4a6b;"></i><h4>Trustworthy ML</h4><p>Robusthet, rättvisa och etik i maskininlärningssystem.</p></div>
-            <div class="card"><i class="fas fa-database" style="font-size:1.8rem; color:#1e4a6b;"></i><h4>Data Science & Analytics</h4><p>Medicinsk dataanalys, mönsterigenkänning och prediktiv modellering.</p></div>
-            <div class="card"><i class="fas fa-cogs" style="font-size:1.8rem; color:#1e4a6b;"></i><h4>Soft Computing</h4><p>Neuro-fuzzy, genetiska algoritmer och optimering för komplexa problem.</p></div>
-        </div>
-    </section>
-
-    <!-- ========== ERFARENHET ========== -->
+    <!-- ===== ERFARENHET ===== -->
     <section>
         <div class="section-title"><i class="fas fa-briefcase"></i> Erfarenhet</div>
+
         <div class="card" style="background:#f1f6fa; border-left:5px solid #1e4a6b; border-radius:1.2rem; padding:1.2rem 1.8rem; margin-bottom:1rem;">
-            <h4>Postdoctoral Researcher</h4>
-            <div class="meta"><i class="fas fa-calendar-alt"></i> 2024 – nu · Malmö Universitet, Sverige</div>
-            <p>Forskning om förklarbar AI och pålitlig maskininlärning. Samarbete med forskargrupper inom hälsa och samhällsnytta.</p>
+            <h4>DevOps Engineer (Examensarbete &amp; LIA)</h4>
+            <div class="meta"><i class="fas fa-calendar-alt"></i> januari 2026 – maj 2026 · Cloudist AB, Malmö</div>
+            <p>
+                Designade och driftsatte en GitOps-driven Internal Developer Platform för observability på Kubernetes. 
+                Byggde full LGTM-stack (Prometheus, Loki, Tempo, Grafana) med FluxCD, Kustomize och Helm. 
+                Konfigurerade säker extern åtkomst (Traefik + cert-manager) och multi-miljösetup. 
+                Dokumenterade hela lösningen i en 63-sidig teknisk uppsats.
+            </p>
         </div>
+
+        <div class="card" style="background:#f8fafc; border-left:5px solid #b0c8da; border-radius:1.2rem; padding:1.2rem 1.8rem; margin-bottom:1rem;">
+            <h4>Studie- och karriärvägledare / Arbetsmarknadskoordinator</h4>
+            <div class="meta"><i class="fas fa-calendar-alt"></i> augusti 2022 – juli 2023 · Alvesta kommun</div>
+            <p>Vägledning av ungdomar och vuxna, samverkan med Arbetsförmedlingen, CSN och YH-myndigheten.</p>
+        </div>
+
+        <div class="card" style="background:#f8fafc; border-left:5px solid #b0c8da; border-radius:1.2rem; padding:1.2rem 1.8rem; margin-bottom:1rem;">
+            <h4>Studie- och karriärvägledare</h4>
+            <div class="meta"><i class="fas fa-calendar-alt"></i> 2020 – 2022 · Uppvidinge kommun</div>
+            <p>Individuella studieplaner för vuxenutbildning, IM och SFI.</p>
+        </div>
+
         <div class="card" style="background:#f8fafc; border-left:5px solid #b0c8da; border-radius:1.2rem; padding:1.2rem 1.8rem;">
-            <h4>Doktorand i datavetenskap (AI & Soft Computing)</h4>
-            <div class="meta"><i class="fas fa-calendar-alt"></i> 2018 – 2023 · Shahid Bahonar University of Kerman, Iran</div>
-            <p>Avhandling om tillämpningar av djupinlärning och optimering inom medicinsk dataanalys. Publicerade flera artiklar i tidskrifter och konferenser.</p>
+            <h4>Praktikant, Social hållbarhet</h4>
+            <div class="meta"><i class="fas fa-calendar-alt"></i> 2019 – 2020 · Länsstyrelsen Kronoberg</div>
+            <p>Kvalitativ uppföljningsstudie av samhällsorientering för nyanlända.</p>
         </div>
     </section>
 
-    <!-- ========== CERTIFIKAT ========== -->
-    <section id="certifikat">
-        <div class="section-title"><i class="fas fa-certificate"></i> Certifikat &amp; utmärkelser</div>
+    <!-- ===== PROJEKT ===== -->
+    <section id="projekt">
+        <div class="section-title"><i class="fas fa-code-branch"></i> Projekt</div>
+        <div class="grid">
+            <div class="card">
+                <h4>Internal Developer Platform</h4>
+                <p>Examensarbete på Cloudist AB. GitOps-driven observability-plattform på Kubernetes (FluxCD, Helm, Kustomize, LGTM-stack).</p>
+                <a href="#" class="badge" style="text-decoration:none;">GitHub →</a>
+            </div>
+            <div class="card">
+                <h4>Terraform + Kubernetes Platform</h4>
+                <p>Egenbyggd plattform med modulär Infrastructure as Code och GitOps-leverans.</p>
+                <a href="#" class="badge" style="text-decoration:none;">GitHub →</a>
+            </div>
+            <div class="card">
+                <h4>Guestbook CI/CD</h4>
+                <p>Three-tier app (Nginx, Golang, PostgreSQL, Redis) med multi-stage builds, Secrets, PVC, HPA och CI/CD.</p>
+                <a href="#" class="badge" style="text-decoration:none;">GitHub →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section>
+        <div class="section-title"><i class="fas fa-cogs"></i> Skills</div>
+        <div class="grid">
+            <div class="card">
+                <h4>Containers &amp; Orchestration</h4>
+                <p>Kubernetes · Docker · Podman · OpenShift · Helm</p>
+            </div>
+            <div class="card">
+                <h4>GitOps &amp; IaC</h4>
+                <p>FluxCD · ArgoCD · Terraform · Kustomize · Git</p>
+            </div>
+            <div class="card">
+                <h4>Observability</h4>
+                <p>Prometheus · Grafana · Loki · Tempo</p>
+            </div>
+            <div class="card">
+                <h4>Cloud &amp; OS</h4>
+                <p>Linux (RHEL) · AWS · Azure · Bash · YAML</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== UTBILDNING & CERTIFIKAT ===== -->
+    <section>
+        <div class="section-title"><i class="fas fa-graduation-cap"></i> Utbildning &amp; Certifikat</div>
+        <div style="margin-bottom:1.5rem;">
+            <div class="card" style="border-left:5px solid #1e4a6b; border-radius:1.2rem; padding:1.2rem 1.8rem; background:#f8fafc;">
+                <h4>Yrkeshögskoleexamen, DevOps Engineer</h4>
+                <div class="meta">Lernia Yrkeshögskola · 2024–2026 · 400 YH-poäng</div>
+            </div>
+            <div class="card" style="border-left:5px solid #b0c8da; border-radius:1.2rem; padding:1.2rem 1.8rem; background:#f8fafc; margin-top:0.8rem;">
+                <h4>Fil.kand. Sociologi</h4>
+                <div class="meta">Linnéuniversitetet · 2017–2020</div>
+            </div>
+        </div>
+
+        <h4 style="margin-bottom:0.8rem;"><i class="fas fa-certificate"></i> Certifikat</h4>
         <div class="cert-grid">
             <div class="cert-item">
-                <i class="fas fa-award"></i>
+                <i class="fas fa-server"></i>
                 <div class="cert-info">
-                    <strong>Top Researcher Award</strong>
-                    <span class="issuer">Shahid Bahonar University · 2022</span>
+                    <strong>Red Hat System Administration II (RH134)</strong>
+                    <span class="issuer">Red Hat</span>
                     <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i> PDF</a>
                 </div>
             </div>
             <div class="cert-item">
-                <i class="fas fa-robot"></i>
+                <i class="fas fa-cloud"></i>
                 <div class="cert-info">
-                    <strong>Deep Learning Specialization</strong>
-                    <span class="issuer">Coursera (deeplearning.ai) · 2021</span>
+                    <strong>Red Hat OpenShift Development I (DO188)</strong>
+                    <span class="issuer">Red Hat</span>
                     <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i> PDF</a>
                 </div>
             </div>
             <div class="cert-item">
-                <i class="fas fa-shield-alt"></i>
+                <i class="fas fa-cloud-upload-alt"></i>
                 <div class="cert-info">
-                    <strong>Ethics in AI</strong>
-                    <span class="issuer">Linux Foundation · 2023</span>
+                    <strong>Red Hat OpenShift Administration I (DO180)</strong>
+                    <span class="issuer">Red Hat</span>
                     <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i> PDF</a>
                 </div>
             </div>
             <div class="cert-item">
-                <i class="fas fa-chart-line"></i>
+                <i class="fas fa-aws"></i>
                 <div class="cert-info">
-                    <strong>Data Science Professional</strong>
-                    <span class="issuer">IBM · 2020</span>
+                    <strong>AWS Academy Cloud Foundations</strong>
+                    <span class="issuer">AWS</span>
+                    <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                </div>
+            </div>
+            <div class="cert-item">
+                <i class="fas fa-linux"></i>
+                <div class="cert-info">
+                    <strong>Red Hat Academy – Program Learner</strong>
+                    <span class="issuer">Red Hat</span>
                     <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i> PDF</a>
                 </div>
             </div>
         </div>
-        <p style="margin-top:0.8rem; font-size:0.9rem; color:#4b637a;">
-            <i class="fas fa-info-circle"></i> Klicka på PDF-länkarna för att visa certifikat (exempel).
+        <p style="margin-top:0.5rem; font-size:0.85rem; color:#4b637a;">
+            <i class="fas fa-info-circle"></i> RH134 Certificate (PDF) · Red Hat Academy Badge (PDF)
         </p>
     </section>
 
-    <!-- ========== PUBLIKATIONER ========== -->
-    <section id="publikationer">
-        <div class="section-title"><i class="fas fa-book-open"></i> Publikationer (urval)</div>
+    <!-- ===== PUBLIKATIONER ===== -->
+    <section>
+        <div class="section-title"><i class="fas fa-book-open"></i> Publikationer</div>
         <div class="pub-item">
-            <strong>Explainable AI in Medical Diagnostics: A Review</strong>
-            <div class="venue">Z. Asghari Varzaneh et al. – Journal of Biomedical Informatics, 2024</div>
-        </div>
-        <div class="pub-item">
-            <strong>Fuzzy Deep Learning for Time‑Series Forecasting</strong>
-            <div class="venue">Z. Asghari Varzaneh, A. R. – IEEE TFS, 2023</div>
-        </div>
-        <div class="pub-item">
-            <strong>Trustworthy ML: Fairness and Robustness in Healthcare</strong>
-            <div class="venue">Z. Asghari Varzaneh – ACM FAccT, 2022</div>
-        </div>
-        <div style="margin-top:0.5rem;">
-            <a href="#" class="btn btn-outline" style="padding:0.3rem 1.2rem; font-size:0.9rem;"><i class="fas fa-arrow-right"></i> Fler publikationer</a>
+            <strong>Det finns nackdelar med friheten</strong>
+            <div class="venue">Linnéuniversitetet · 2020</div>
+            <p style="margin-top:0.3rem; font-size:0.95rem; color:#1f3347;">
+                Kvalitativ studie av hur samhällskommunikatörer i sex kommuner tolkar lagen om samhällsorientering för nyanlända.
+            </p>
         </div>
     </section>
 
-    <!-- ========== PROJEKT (valfritt) ========== -->
-    <section id="projekt">
-        <div class="section-title"><i class="fas fa-code-branch"></i> Projekt</div>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:1rem;">
-            <div class="card"><h4>XAI Dashboard</h4><p>Interaktiv webbapp för att visualisera och förklara modellbeslut.</p><span class="badge">Python</span><span class="badge">SHAP</span></div>
-            <div class="card"><h4>Medical Data Analysis</h4><p>Prediktiv modell för tidig upptäckt av sjukdomar baserat på patientdata.</p><span class="badge">PyTorch</span><span class="badge">Pandas</span></div>
-            <div class="card"><h4>Trustworthy ML Toolkit</h4><p>Bibliotek för robusthet och fairness i ML-modeller.</p><span class="badge">scikit-learn</span><span class="badge">Open source</span></div>
+    <!-- ===== CV ===== -->
+    <section>
+        <div class="section-title"><i class="fas fa-file-alt"></i> CV</div>
+        <p>Ladda ner mitt CV:</p>
+        <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:0.5rem;">
+            <a href="#" class="btn btn-primary"><i class="fas fa-file-pdf"></i> CV Svenska (PDF)</a>
+            <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf"></i> CV English (PDF)</a>
         </div>
     </section>
 
-    <!-- ========== KONTAKT ========== -->
+    <!-- ===== KONTAKT ===== -->
     <section id="kontakt">
         <div class="section-title"><i class="fas fa-address-card"></i> Kontakt</div>
         <div class="contact-grid">
-            <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:zahra.varzaneh@mau.se">zahra.varzaneh@mau.se</a></div>
-            <div class="contact-item"><i class="fab fa-linkedin-in"></i> <a href="#">linkedin.com/in/zahra-asghari</a></div>
-            <div class="contact-item"><i class="fab fa-github"></i> <a href="#">github.com/zahra-ai</a></div>
-            <div class="contact-item"><i class="fas fa-map-pin"></i> Malmö, Sverige</div>
+            <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:arash_rahimi92@hotmail.com">arash_rahimi92@hotmail.com</a></div>
+            <div class="contact-item"><i class="fab fa-linkedin-in"></i> <a href="#">LinkedIn</a></div>
+            <div class="contact-item"><i class="fab fa-github"></i> <a href="#">GitHub</a></div>
+            <div class="contact-item"><i class="fas fa-map-pin"></i> Sverige</div>
         </div>
         <p style="margin-top:1.2rem; font-size:0.95rem;">
-            <i class="fas fa-handshake"></i> Jag är öppen för samarbeten, gästföreläsningar och industrikontakter inom AI &amp; pålitlig maskininlärning.
+            <i class="fas fa-handshake"></i> Öppen för Junior DevOps, Platform Engineer eller SRE-roller i Sverige, Norden och EU.
         </p>
     </section>
 
-    <!-- ========== FOOTER ========== -->
+    <!-- ===== FOOTER ===== -->
     <div class="footer-note">
-        © 2026 Zahra Asghari Varzaneh · Byggd med <i class="fas fa-heart" style="color:#b22234;"></i> för forskning och innovation
+        © 2026 Arash Rahimi
     </div>
 
 </div>
