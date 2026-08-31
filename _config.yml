@@ -1,3 +1,106 @@
-# Disable Jekyll theme completely
-theme: null
-plugins: []
+# ================================
+# Arash Rahimi – Personal Portfolio
+# Minimal Mistakes configuration
+# ================================
+
+remote_theme: "mmistakes/minimal-mistakes"
+
+minimal_mistakes_skin: "dark"
+
+locale: "sv-SE"
+
+title: "Arash Rahimi"
+title_separator: "|"
+subtitle: "Junior DevOps / Platform Engineer"
+name: "Arash Rahimi"
+
+description: >-
+  Junior DevOps och Platform Engineer med fokus på Kubernetes,
+  GitOps, Terraform, AWS, Azure och observability.
+
+url: "https://arash00009.github.io"
+baseurl: ""
+
+repository: "arash00009/Arash00009.github.io"
+
+logo: "/assets/images/logo.png"
+
+masthead_title: "Arash Rahimi"
+
+breadcrumbs: true
+
+search: true
+search_full_content: true
+
+words_per_minute: 180
+
+# Sidomeny / profil på vänster sida
+author:
+  name: "Arash Rahimi"
+  avatar: "/assets/images/arash-profile.jpg"
+  bio: "Junior DevOps / Platform Engineer. Kubernetes, GitOps, Terraform, AWS, Azure och observability."
+  location: "Landskrona, Skåne, Sverige"
+  email: "arash_rahimi92@hotmail.com"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/arash00009"
+
+    # ÄNDRA TILL DIN RIKTIGA LINKEDIN-LÄNK
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/"
+
+    - label: "E-post"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:arash_rahimi92@hotmail.com"
+
+    - label: "Landskrona, Sverige"
+      icon: "fas fa-fw fa-location-dot"
+      url: "https://www.google.com/maps/search/Landskrona+Sweden"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/arash00009"
+
+    - label: "E-post"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:arash_rahimi92@hotmail.com"
+
+# Plugins som stöds av GitHub Pages
+plugins:
+  - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Visa framtida inlägg/sidor vid behov
+future: true
+
+# Standardinställningar för alla vanliga sidor
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "single"
+      author_profile: true
+      share: false
+      related: false
+
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "single"
+      author_profile: true
+      share: false
+      related: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
