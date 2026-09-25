@@ -8,7 +8,7 @@ A single-page site in plain HTML, CSS and JavaScript, hosted on GitHub Pages. No
 
 I graduated as a DevOps Engineer from Lernia Yrkeshögskola in June 2026. During my internship at Cloudist AB in Malmö I built a GitOps-based internal developer platform for observability on Kubernetes (FluxCD, Kustomize, Helm and the LGTM stack), and wrote my 63-page thesis about it.
 
-Before IT I have a BA in sociology from Linnaeus University and three years as a career counsellor in Uppvidinge and Alvesta, so I'm used to explaining technical things to people who aren't engineers.
+Before IT I have a BA in sociology from Linnaeus University and almost three years as a career counsellor in Uppvidinge and Alvesta, so I'm used to explaining technical things to people who aren't engineers.
 
 I'm looking for a junior DevOps, Platform or SRE role in Skåne, Copenhagen or elsewhere in the Nordics.
 
@@ -16,7 +16,7 @@ I'm looking for a junior DevOps, Platform or SRE role in Skåne, Copenhagen or e
 
 | Project | What it is |
 |---|---|
-| [polaris-ai-platform](https://github.com/arash00009/polaris-ai-platform) | GitOps platform for an AI service: Helm across dev/staging/prod, Argo CD, Trivy/SBOM, Prometheus/Loki/Grafana via OpenTelemetry *(in progress)* |
+| [polaris-ai-platform](https://github.com/arash00009/polaris-ai-platform) | GitOps platform for an AI service: Helm across dev/staging/prod, Argo CD, Trivy/SBOM, Prometheus metrics and OpenTelemetry logs in Grafana *(in progress)* |
 | [flux-observability-platform](https://github.com/arash00009/flux-observability-platform) | My thesis: metrics, logs and traces on Kubernetes, reconciled by FluxCD |
 | [HiveBox](https://github.com/arash00009/End-to-End-hand-on-project) | Python API from code to cluster with Docker, GitHub Actions, Helm and Argo CD |
 | [terraform-k8s-platform](https://github.com/arash00009/terraform-k8s-platform) | Kind clusters with modular Terraform, HCP Terraform state and FluxCD |
