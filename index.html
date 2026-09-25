@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Arash Rahimi | Junior DevOps Engineer</title>
+    <title>Arash Rahimi | DevOps / Platform Engineer</title>
 
     <meta name="description" content="Arash Rahimi – Junior DevOps och Platform Engineer med fokus på Kubernetes, GitOps, Terraform, AWS, Azure och observability.">
 
@@ -729,7 +729,7 @@
                 </a>
 
                 <!-- BYT GÄRNA UT MOT DIN RIKTIGA LINKEDIN-LÄNK -->
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/arash-rahimi92" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
 
@@ -798,7 +798,7 @@
 
                     <div class="terminal-body">
                         <div><span class="terminal-command">$</span> whoami</div>
-                        <div><span class="terminal-key">role:</span> Junior DevOps Engineer</div>
+                        <div><span class="terminal-key">role:</span> DevOps / Platform Engineer</div>
                         <br>
                         <div><span class="terminal-command">$</span> kubectl get skills</div>
                         <div><span class="terminal-key">containers:</span> Kubernetes, Docker, Helm</div>
@@ -861,10 +861,31 @@
                 <div class="projects-grid">
                     <article class="card project-card">
                         <div class="project-number">PROJECT_01</div>
+                        <h3>Polaris AI Platform</h3>
+                        <p>
+                            Lokal plattform för att leverera och övervaka en AI-tjänst: Helm i dev, staging och prod, GitOps med Argo CD från ett separat repo, CI med Trivy, SBOM och gitleaks, samt Prometheus, Loki och Grafana. Pågår.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">Argo CD</span>
+                            <span class="tag">Helm</span>
+                            <span class="tag">GitHub Actions</span>
+                            <span class="tag">Trivy</span>
+                            <span class="tag">OpenTelemetry</span>
+                        </div>
+
+                        <a class="project-link" href="https://github.com/arash00009/polaris-ai-platform" target="_blank" rel="noopener noreferrer">
+                            Visa på GitHub
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </article>
+
+                    <article class="card project-card">
+                        <div class="project-number">PROJECT_02</div>
                         <h3>Internal Developer Platform</h3>
                         <p>
-                            GitOps-driven observability-plattform för Kubernetes, utvecklad under
-                            examensarbete och LIA på Cloudist AB i Malmö.
+                            GitOps-driven observability-plattform för Kubernetes, byggd under examensarbete och LIA på Cloudist AB i Malmö. Hela stacken återskapas från Git med FluxCD.
                         </p>
 
                         <div class="tags">
@@ -874,31 +895,10 @@
                             <span class="tag">Grafana</span>
                             <span class="tag">Prometheus</span>
                             <span class="tag">Loki</span>
+                            <span class="tag">Tempo</span>
                         </div>
 
-                        <a class="project-link" href="https://github.com/arash00009" target="_blank" rel="noopener noreferrer">
-                            Visa på GitHub
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </article>
-
-                    <article class="card project-card">
-                        <div class="project-number">PROJECT_02</div>
-                        <h3>Terraform + Kubernetes Platform</h3>
-                        <p>
-                            Modulär Infrastructure as Code-lösning med Terraform och Kubernetes
-                            för reproducerbara molnmiljöer.
-                        </p>
-
-                        <div class="tags">
-                            <span class="tag">Terraform</span>
-                            <span class="tag">Kubernetes</span>
-                            <span class="tag">IaC</span>
-                            <span class="tag">GitOps</span>
-                            <span class="tag">AWS</span>
-                        </div>
-
-                        <a class="project-link" href="https://github.com/arash00009" target="_blank" rel="noopener noreferrer">
+                        <a class="project-link" href="https://github.com/arash00009/flux-observability-platform" target="_blank" rel="noopener noreferrer">
                             Visa på GitHub
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
@@ -906,25 +906,89 @@
 
                     <article class="card project-card">
                         <div class="project-number">PROJECT_03</div>
-                        <h3>Guestbook CI/CD</h3>
+                        <h3>Terraform + Kubernetes Platform</h3>
                         <p>
-                            Three-tier-applikation med Nginx, Golang, PostgreSQL och Redis.
-                            Innehåller Secrets, PVC, HPA, Docker och CI/CD.
+                            Kind-kluster med modulär Terraform, separata dev/prod-state i HCP Terraform och FluxCD som synkar appar från ett separat Git-repo.
                         </p>
 
                         <div class="tags">
-                            <span class="tag">Docker</span>
-                            <span class="tag">Golang</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">Redis</span>
-                            <span class="tag">CI/CD</span>
+                            <span class="tag">Terraform</span>
+                            <span class="tag">HCP Terraform</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">FluxCD</span>
+                            <span class="tag">IaC</span>
                         </div>
 
-                        <a class="project-link" href="https://github.com/arash00009" target="_blank" rel="noopener noreferrer">
+                        <a class="project-link" href="https://github.com/arash00009/terraform-k8s-platform" target="_blank" rel="noopener noreferrer">
                             Visa på GitHub
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </article>
+
+                    <article class="card project-card">
+                        <div class="project-number">PROJECT_04</div>
+                        <h3>HiveBox</h3>
+                        <p>
+                            Python-API från kod till kluster i sju faser: Docker, GitHub Actions, Kubernetes, Helm och Argo CD, med Valkey-cache, MinIO och Prometheus-metrics.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Helm</span>
+                            <span class="tag">Argo CD</span>
+                            <span class="tag">Prometheus</span>
+                        </div>
+
+                        <a class="project-link" href="https://github.com/arash00009/End-to-End-hand-on-project" target="_blank" rel="noopener noreferrer">
+                            Visa på GitHub
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </article>
+                    <article class="card project-card">
+                        <div class="project-number">PROJECT_05</div>
+                        <h3>Guestbook på OpenShift</h3>
+                        <p>
+                            Three-tier-applikation med Nginx, Go, PostgreSQL och Redis. Secrets, PVC och HPA, CI i GitHub Actions och CD med Argo CD (auto-sync, self-heal, least privilege-RBAC).
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">OpenShift</span>
+                            <span class="tag">Go</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">Argo CD</span>
+                        </div>
+
+                        <a class="project-link" href="https://github.com/arash00009/guestbook-CICD" target="_blank" rel="noopener noreferrer">
+                            Visa på GitHub
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </article>
+
+                    <article class="card project-card">
+                        <div class="project-number">PROJECT_06</div>
+                        <h3>GreenOps Cost &amp; Carbon Estimator</h3>
+                        <p>
+                            REST-API som uppskattar molnkostnad och CO2-avtryck per region och instansstorlek. Testat med pytest och flake8, med CI i GitHub Actions.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">pytest</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">GitHub Actions</span>
+                        </div>
+
+                        <a class="project-link" href="https://github.com/arash00009/greenops-cost-estimator" target="_blank" rel="noopener noreferrer">
+                            Visa på GitHub
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </article>
+
+
+                
                 </div>
             </section>
 
