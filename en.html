@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arash Rahimi | DevOps / Platform Engineer</title>
+
+    <meta name="description" content="Arash Rahimi – DevOps / Platform Engineer focused on Kubernetes, GitOps, Terraform, AWS, Azure and observability.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #07111f;
+            --bg-soft: #0c1b2e;
+            --surface: #10243b;
+            --surface-hover: #163653;
+            --border: rgba(148, 163, 184, 0.18);
+            --text: #f8fafc;
+            --muted: #a7b6c9;
+            --blue: #38bdf8;
+            --green: #34d399;
+            --container: 1120px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 5% 0%, rgba(14, 165, 233, 0.16), transparent 30rem),
+                radial-gradient(circle at 100% 20%, rgba(52, 211, 153, 0.10), transparent 28rem),
+                var(--bg);
+            color: var(--text);
+            font-family: "Inter", Arial, sans-serif;
+            line-height: 1.65;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(var(--container), calc(100% - 2rem));
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            min-height: 74px;
+            background: rgba(7, 17, 31, 0.9);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(18px);
+        }
+
+        .nav-inner {
+            width: min(var(--container), calc(100% - 2rem));
+            min-height: 74px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .brand {
+            white-space: nowrap;
+            font-family: "DM Mono", monospace;
+            font-size: 1rem;
+            color: white;
+        }
+
+        .brand span {
+            color: var(--green);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 0.84rem;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .social-links a {
+            color: var(--muted);
+            font-size: 1.1rem;
+            transition: 0.2s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--blue);
+            transform: translateY(-2px);
+        }
+
+        .menu-button {
+            display: none;
+            color: white;
+            border: 0;
+            background: transparent;
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 620px;
+            display: grid;
+            grid-template-columns: 1.35fr 0.65fr;
+            align-items: center;
+            gap: 3rem;
+            padding: 7rem 0 5rem;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.42rem 0.75rem;
+            margin-bottom: 1.4rem;
+            border: 1px solid rgba(52, 211, 153, 0.35);
+            border-radius: 999px;
+            color: var(--green);
+            background: rgba(52, 211, 153, 0.08);
+            font-family: "DM Mono", monospace;
+            font-size: 0.75rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--green);
+            box-shadow: 0 0 14px var(--green);
+        }
+
+        h1 {
+            max-width: 800px;
+            margin-bottom: 1.5rem;
+            font-size: clamp(2.7rem, 6vw, 5.3rem);
+            line-height: 1.02;
+            letter-spacing: -0.07em;
+        }
+
+        .accent {
+            color: var(--blue);
+        }
+
+        .hero-text {
+            max-width: 720px;
+            margin-bottom: 2rem;
+            color: var(--muted);
+            font-size: 1.08rem;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            min-height: 47px;
+            padding: 0.72rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .button-primary {
+            color: #06101c;
+            background: var(--blue);
+            border-color: var(--blue);
+        }
+
+        .button-primary:hover {
+            background: #7dd3fc;
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            color: white;
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .button-secondary:hover {
+            color: var(--blue);
+            border-color: var(--blue);
+            transform: translateY(-2px);
+        }
+
+        /* TERMINAL */
+
+        .terminal {
+            overflow: hidden;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 18px;
+            background: rgba(12, 27, 46, 0.9);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        .terminal-header {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.9rem 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .terminal-circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .circle-red { background: #fb7185; }
+        .circle-yellow { background: #fbbf24; }
+        .circle-green { background: #34d399; }
+
+        .terminal-name {
+            margin-left: 0.4rem;
+            color: var(--muted);
+            font-family: "DM Mono", monospace;
+            font-size: 0.7rem;
+        }
+
+        .terminal-body {
+            padding: 1.35rem;
+            color: #cbd5e1;
+            font-family: "DM Mono", monospace;
+            font-size: 0.76rem;
+            line-height: 1.9;
+        }
+
+        .terminal-command {
+            color: var(--green);
+        }
+
+        .terminal-key {
+            color: var(--blue);
+        }
+
+        .terminal-good {
+            color: var(--green);
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 5rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .section-label {
+            margin-bottom: 0.65rem;
+            color: var(--blue);
+            font-family: "DM Mono", monospace;
+            font-size: 0.76rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            max-width: 760px;
+            margin-bottom: 1rem;
+            font-size: clamp(2rem, 3vw, 3rem);
+            line-height: 1.15;
+            letter-spacing: -0.05em;
+        }
+
+        .section-intro {
+            max-width: 740px;
+            margin-bottom: 2rem;
+            color: var(--muted);
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 1.25rem;
+        }
+
+        .card {
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: rgba(16, 36, 59, 0.72);
+        }
+
+        .about-card {
+            padding: 1.5rem;
+        }
+
+        .about-card h3 {
+            margin-bottom: 0.7rem;
+            font-size: 1.05rem;
+        }
+
+        .about-card p {
+            color: var(--muted);
+        }
+
+        .fact {
+            padding: 0.95rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .fact:last-child {
+            border-bottom: 0;
+        }
+
+        .fact small {
+            display: block;
+            margin-bottom: 0.15rem;
+            color: var(--muted);
+            font-family: "DM Mono", monospace;
+            font-size: 0.7rem;
+        }
+
+        .fact strong {
+            font-size: 0.9rem;
+        }
+
+        /* PROJECTS */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            padding: 1.4rem;
+            transition: 0.2s ease;
+        }
+
+        .project-card:hover {
+            border-color: rgba(56, 189, 248, 0.7);
+            transform: translateY(-5px);
+        }
+
+        .project-number {
+            margin-bottom: 1.2rem;
+            color: var(--blue);
+            font-family: "DM Mono", monospace;
+            font-size: 0.74rem;
+        }
+
+        .project-card h3 {
+            margin-bottom: 0.6rem;
+            font-size: 1.08rem;
+        }
+
+        .project-card p {
+            margin-bottom: 1rem;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: auto;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            padding: 0.25rem 0.5rem;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 999px;
+            color: #a5e6ff;
+            background: rgba(56, 189, 248, 0.08);
+            font-family: "DM Mono", monospace;
+            font-size: 0.68rem;
+        }
+
+        .project-link {
+            color: var(--blue);
+            font-size: 0.84rem;
+            font-weight: 700;
+        }
+
+        .project-link:hover {
+            color: white;
+        }
+
+        /* SKILLS */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .skill-card {
+            padding: 1.25rem;
+        }
+
+        .skill-card i {
+            margin-bottom: 0.75rem;
+            color: var(--blue);
+            font-size: 1.2rem;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 0.96rem;
+        }
+
+        .skill-card p {
+            color: var(--muted);
+            font-family: "DM Mono", monospace;
+            font-size: 0.76rem;
+            line-height: 1.75;
+        }
+
+        /* EXPERIENCE */
+
+        .timeline {
+            margin-left: 0.45rem;
+            padding-left: 1.6rem;
+            border-left: 2px solid rgba(56, 189, 248, 0.4);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2.3rem;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            top: 0.42rem;
+            left: -2.04rem;
+            width: 11px;
+            height: 11px;
+            border: 3px solid var(--bg);
+            border-radius: 50%;
+            background: var(--blue);
+        }
+
+        .timeline-date {
+            margin-bottom: 0.35rem;
+            color: var(--blue);
+            font-family: "DM Mono", monospace;
+            font-size: 0.74rem;
+        }
+
+        .timeline-item h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.08rem;
+        }
+
+        .timeline-item p {
+            max-width: 880px;
+            color: var(--muted);
+        }
+
+        /* EDUCATION */
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2.3rem;
+        }
+
+        .education-card {
+            padding: 1.3rem;
+            border-left: 3px solid var(--blue);
+            border-radius: 0 16px 16px 0;
+            background: rgba(16, 36, 59, 0.72);
+        }
+
+        .education-card h3 {
+            margin-bottom: 0.4rem;
+            font-size: 1rem;
+        }
+
+        .education-card p {
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        .certificates-title {
+            margin-bottom: 1rem;
+            font-size: 1.35rem;
+        }
+
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.85rem;
+        }
+
+        .certificate-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .certificate-card h3 {
+            margin-bottom: 0.15rem;
+            font-size: 0.88rem;
+        }
+
+        .certificate-card p {
+            color: var(--muted);
+            font-size: 0.73rem;
+        }
+
+        .download-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            border-radius: 9px;
+            color: var(--blue);
+            transition: 0.2s ease;
+        }
+
+        .download-icon:hover {
+            color: #07111f;
+            background: var(--blue);
+        }
+
+        /* PUBLICATION */
+
+        .publication {
+            padding: 1.3rem;
+            border-left: 3px solid var(--green);
+            border-radius: 0 16px 16px 0;
+            background: rgba(16, 36, 59, 0.72);
+        }
+
+        .publication h3 {
+            margin-bottom: 0.35rem;
+        }
+
+        .publication p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        /* CONTACT */
+
+        .contact-card {
+            padding: 2rem;
+            text-align: center;
+            background:
+                radial-gradient(circle at top center, rgba(56, 189, 248, 0.15), transparent 24rem),
+                rgba(16, 36, 59, 0.78);
+        }
+
+        .contact-card h2 {
+            margin-bottom: 0.8rem;
+            font-size: clamp(1.8rem, 4vw, 2.7rem);
+            letter-spacing: -0.05em;
+        }
+
+        .contact-card p {
+            max-width: 680px;
+            margin: 0 auto 1.5rem;
+            color: var(--muted);
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        footer {
+            padding: 2.2rem 0;
+            color: var(--muted);
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+            .hero,
+            .about-grid,
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid,
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .menu-button {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 74px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.2rem;
+                background: var(--bg-soft);
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .social-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 4.5rem 0 4rem;
+            }
+
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            .projects-grid,
+            .skills-grid,
+            .certificates-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            section {
+                padding: 3.8rem 0;
+            }
+
+            .contact-card {
+                padding: 1.35rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="#top" class="brand">
+                <span>&lt;/&gt;</span> arash.rahimi
+            </a>
+
+            <button class="menu-button" id="menuButton" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#om">About</a></li>
+                <li><a href="#projekt">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#erfarenhet">Experience</a></li>
+                <li><a href="#utbildning">Education</a></li>
+                <li><a href="#kontakt">Contact</a></li>
+                <li><a href="./index.html" lang="sv">SV</a></li>
+            </ul>
+
+            <div class="social-links">
+                <a href="https://github.com/arash00009" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/arash-rahimi92" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:arash_rahimi92@hotmail.com" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="top">
+        <div class="container">
+
+            <section class="hero" id="om">
+                <div>
+                    <div class="eyebrow">
+                        <span class="status-dot"></span>
+                        OPEN FOR OPPORTUNITIES · SWEDEN / NORDICS / EU
+                    </div>
+
+                    <h1>
+                        Building reliable
+                        <span class="accent">platforms</span>
+                        for teams that ship.
+                    </h1>
+
+                    <p class="hero-text">
+                        I'm a DevOps / Platform Engineer focused on Kubernetes, GitOps,
+                        Terraform and observability. I combine technical structure, problem
+                        solving and an understanding of people and organisations to make
+                        developers' days easier and delivery more reliable.
+                    </p>
+
+                    <div class="buttons">
+                        <a
+                            class="button button-primary"
+                            href="./assets/CV_Arash_Rahimi_SV.pdf"
+                            download="CV_Arash_Rahimi_SV.pdf">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            Svenskt CV (PDF)
+                        </a>
+
+                        <a
+                            class="button button-secondary"
+                            href="./assets/CV_Arash_Rahimi_EN.pdf"
+                            download="CV_Arash_Rahimi_EN.pdf">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            Download CV in English
+                        </a>
+
+                        <a class="button button-secondary" href="#projekt">
+                            <i class="fa-solid fa-code-branch"></i>
+                            See my projects
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="terminal">
+                    <div class="terminal-header">
+                        <span class="terminal-circle circle-red"></span>
+                        <span class="terminal-circle circle-yellow"></span>
+                        <span class="terminal-circle circle-green"></span>
+                        <span class="terminal-name">arash@devops:~</span>
+                    </div>
+
+                    <div class="terminal-body">
+                        <div><span class="terminal-command">$</span> whoami</div>
+                        <div><span class="terminal-key">role:</span> DevOps / Platform Engineer</div>
+                        <br>
+                        <div><span class="terminal-command">$</span> kubectl get skills</div>
+                        <div><span class="terminal-key">containers:</span> Kubernetes, Docker, Helm</div>
+                        <div><span class="terminal-key">gitops:</span> FluxCD, ArgoCD, Kustomize</div>
+                        <div><span class="terminal-key">iac:</span> Terraform, YAML, GitHub Actions</div>
+                        <div><span class="terminal-key">cloud:</span> AWS, Azure, Linux</div>
+                        <br>
+                        <div><span class="terminal-command">$</span> status</div>
+                        <div class="terminal-good">✓ Ready for the next challenge</div>
+                    </div>
+                </aside>
+            </section>
+
+            <section>
+                <div class="section-label">01 / Profile</div>
+                <h2 class="section-title">
+                    Technology with a focus on people, stability and delivery.
+                </h2>
+
+                <div class="about-grid">
+                    <article class="card about-card">
+                        <h3>What I want to do</h3>
+                        <p>
+                            I want to work in a team where DevOps is not only about tools, but
+                            also about collaboration, clear processes, safe delivery and a
+                            developer experience that makes the right thing the easy thing.
+                        </p>
+                    </article>
+
+                    <aside class="card about-card">
+                        <div class="fact">
+                            <small>ROLES</small>
+                            <strong>Junior DevOps · Platform Engineer · SRE</strong>
+                        </div>
+
+                        <div class="fact">
+                            <small>LOCATION</small>
+                            <strong>Landskrona, Skåne · Sweden</strong>
+                        </div>
+
+                        <div class="fact">
+                            <small>FOCUS</small>
+                            <strong>Kubernetes · GitOps · Terraform · Cloud</strong>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section id="projekt">
+                <div class="section-label">02 / Projects</div>
+                <h2 class="section-title">
+                    Projects that show how I work in practice.
+                </h2>
+
+                <p class="section-intro">
+                    My projects focus on automation, reproducible infrastructure,
+                    container platforms, security and observability.
+                </p>
+
+                <div class="projects-grid">
+                    <article class="card project-card">
+                        <div class="project-number">PROJECT_01</div>
+                        <h3>Polaris AI Platform</h3>
+                        <p>
+                            Local platform for delivering and observing an AI service: Helm in dev, staging and prod, GitOps with Argo CD from a separate repo, CI with Trivy, SBOM and gitleaks, plus Prometheus, Loki and Grafana. In progress.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">Argo CD</span>
+                            <span class="tag">Helm</span>
+                            <span class="tag">GitHub Actions</span>
+                            <span class="tag">Trivy</span>
+                            <span class="tag">OpenTelemetry</span>
+                        </div>
+
+                        <a class="project-link" href="https://github.com/arash00009/polaris-ai-platform" target="_blank" rel="noopener noreferrer">
+                            View on GitHub
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </article>
+
+                    <article class="card project-card">
+                        <div class="project-number">PROJECT_02</div>
+                        <h3>Flux Observability Platform</h3>
+                        <p>
+                            GitOps-driven observability platform for Kubernetes, built as my thesis project during my internship at Cloudist AB in Malmö. The whole stack is recreated from Git with FluxCD.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">FluxCD</span>
+                            <span class="tag">Helm</span>
+                            <span class="tag">Grafana</span>
+                            <span class="tag">Prometheus</span>
+                            <span class="tag">Loki</span>
+                            <span class="tag">Tempo</span>
+                        </div>
+
+                        <a class="project-link" href="https://github.com/arash00009/flux-observability-platform" target="_blank" rel="noopener noreferrer">
+                            View on GitHub
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </article>
+
+                    <article class="card project-card">
+                        <div class="project-number">PROJECT_03</div>
+                        <h3>Terraform + Kubernetes Platform</h3>
+                        <p>
+                            Kind clusters with modular Terraform, separate dev/prod state in HCP Terraform, and FluxCD syncing apps from a separate Git repository.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Terraform</span>
+                            <span class="tag">HCP Terraform</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">FluxCD</span>
+                            <span class="tag">IaC</span>
+                        </div>
+
+                        <a class="project-link" href="https://github.com/arash00009/terraform-k8s-platform" target="_blank" rel="noopener noreferrer">
+                            View on GitHub
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </article>
+
+                    <article class="card project-card">
+                        <div class="project-number">PROJECT_04</div>
+                        <h3>HiveBox</h3>
+                        <p>
+                            Python API from code to cluster in seven phases: Docker, GitHub Actions, Kubernetes, Helm and Argo CD, with Valkey cache, MinIO and Prometheus metrics.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Helm</span>
+                            <span class="tag">Argo CD</span>
+                            <span class="tag">Prometheus</span>
+                        </div>
+
+                        <a class="project-link" href="https://github.com/arash00009/End-to-End-hand-on-project" target="_blank" rel="noopener noreferrer">
+                            View on GitHub
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </article>
+                    <article class="card project-card">
+                        <div class="project-number">PROJECT_05</div>
+                        <h3>Guestbook on OpenShift</h3>
+                        <p>
+                            Three-tier application with Nginx, Go, PostgreSQL and Redis. Secrets, ConfigMaps and persistent storage, CI in GitHub Actions and CD with Argo CD (auto-sync, self-heal).
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">OpenShift</span>
+                            <span class="tag">Go</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">Argo CD</span>
+                        </div>
+
+                        <a class="project-link" href="https://github.com/arash00009/guestbook-CICD" target="_blank" rel="noopener noreferrer">
+                            View on GitHub
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </article>
+
+                    <article class="card project-card">
+                        <div class="project-number">PROJECT_06</div>
+                        <h3>GreenOps Cost &amp; Carbon Estimator</h3>
+                        <p>
+                            REST API that estimates cloud cost and CO2 footprint per region and instance size. Tested with pytest and flake8, with CI in GitHub Actions.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">pytest</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">GitHub Actions</span>
+                        </div>
+
+                        <a class="project-link" href="https://github.com/arash00009/greenops-cost-estimator" target="_blank" rel="noopener noreferrer">
+                            View on GitHub
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </article>
+
+
+                
+                </div>
+            </section>
+
+            <section id="skills">
+                <div class="section-label">03 / Tech stack</div>
+                <h2 class="section-title">
+                    Tools I build with, learn and work with.
+                </h2>
+
+                <div class="skills-grid">
+                    <article class="card skill-card">
+                        <i class="fa-solid fa-cubes"></i>
+                        <h3>Containers & Kubernetes</h3>
+                        <p>Kubernetes · Docker · Podman · Helm · OpenShift · kind</p>
+                    </article>
+
+                    <article class="card skill-card">
+                        <i class="fa-solid fa-code-branch"></i>
+                        <h3>GitOps & CI/CD</h3>
+                        <p>FluxCD · ArgoCD · Kustomize · Git · GitHub Actions</p>
+                    </article>
+
+                    <article class="card skill-card">
+                        <i class="fa-solid fa-server"></i>
+                        <h3>Infrastructure as Code</h3>
+                        <p>Terraform · YAML · Bash · Modular IaC</p>
+                    </article>
+
+                    <article class="card skill-card">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <h3>Observability</h3>
+                        <p>Prometheus · Grafana · Loki · Tempo · Alertmanager</p>
+                    </article>
+
+                    <article class="card skill-card">
+                        <i class="fa-solid fa-cloud"></i>
+                        <h3>Cloud & Linux</h3>
+                        <p>AWS · Azure · Linux · RHEL · Networking</p>
+                    </article>
+
+                    <article class="card skill-card">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Security</h3>
+                        <p>RBAC · cert-manager · Secrets · Network Policies</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="erfarenhet">
+                <div class="section-label">04 / Experience</div>
+                <h2 class="section-title">
+                    From people and change work to platform engineering.
+                </h2>
+
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-date">JANUARY 2026 – MAY 2026 · CLOUDIST AB, MALMÖ</div>
+                        <h3>Platform Engineer Intern (LIA) — thesis</h3>
+                        <p>
+                            Designed and deployed a GitOps-driven internal developer platform
+                            for observability on Kubernetes (Flux Observability Platform). Built an
+                            LGTM stack with Prometheus, Loki, Tempo and Grafana. Worked with FluxCD,
+                            Helm, Kustomize, Traefik, cert-manager and multiple environments.
+                        </p>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-date">JULY 2023 – JUNE 2024 · SYVBYRÅN AB</div>
+                        <h3>Founder</h3>
+                        <p>
+                            Founded and ran a consultancy focused on career development and
+                            data analysis.
+                        </p>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-date">AUGUST 2022 – JULY 2023 · ALVESTA MUNICIPALITY</div>
+                        <h3>Career Counsellor / Labour Market Coordinator</h3>
+                        <p>
+                            Guided young people and adults on education and work. Coordinated
+                            with the Public Employment Service, CSN and the Swedish National
+                            Agency for Higher Vocational Education.
+                        </p>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-date">2020 – 2022 · UPPVIDINGE MUNICIPALITY</div>
+                        <h3>Career Counsellor</h3>
+                        <p>
+                            Made individual study plans in adult education, the introduction
+                            programme and SFI (Swedish for immigrants).
+                        </p>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-date">2019 – 2020 · COUNTY ADMINISTRATIVE BOARD OF KRONOBERG</div>
+                        <h3>Intern — Social sustainability</h3>
+                        <p>
+                            Carried out a qualitative follow-up study of the civic orientation
+                            programme for newly arrived immigrants.
+                        </p>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-date">2012 – 2015 · PRESSBYRÅN</div>
+                        <h3>Sales Assistant</h3>
+                        <p>
+                            Checkout, stock, scheduling and customer service. Named one of the
+                            best sellers in southern Sweden.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="utbildning">
+                <div class="section-label">05 / Education & certificates</div>
+                <h2 class="section-title">
+                    A technical foundation and continuous learning.
+                </h2>
+
+                <div class="education-grid">
+                    <article class="education-card">
+                        <h3>Higher Vocational Diploma — DevOps Engineer</h3>
+                        <p>Lernia YH · 2024–2026 · 400 HVE credits</p>
+                    </article>
+
+                    <article class="education-card">
+                        <h3>BA — Sociology</h3>
+                        <p>Linnaeus University · 2017–2020</p>
+                    </article>
+                </div>
+
+                <h3 class="certificates-title">Certificates</h3>
+
+                <div class="certificates-grid">
+
+                    <!-- assets/RH134_Certificate.pdf -->
+                    <article class="card certificate-card">
+                        <div>
+                            <h3>Red Hat System Administration II</h3>
+                            <p>RH134 Certificate</p>
+                        </div>
+
+                        <a
+                            class="download-icon"
+                            href="./assets/RH134_Certificate.pdf"
+                            download="RH134_Certificate.pdf"
+                            aria-label="Download RH134 certificate">
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+                    </article>
+
+                    <!-- assets/Red_Hat_Academy_Learner_Badge.pdf -->
+                    <article class="card certificate-card">
+                        <div>
+                            <h3>Red Hat Academy Learner Badge</h3>
+                            <p>Red Hat Academy</p>
+                        </div>
+
+                        <a
+                            class="download-icon"
+                            href="./assets/Red_Hat_Academy_Learner_Badge.pdf"
+                            download="Red_Hat_Academy_Learner_Badge.pdf"
+                            aria-label="Download Red Hat Academy certificate">
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+                    </article>
+
+                    <article class="card certificate-card">
+                        <div>
+                            <h3>Red Hat Academy Program Learner</h3>
+                            <p>Program Learner Certificate</p>
+                        </div>
+
+                        <a
+                            class="download-icon"
+                            href="./assets/Red_Hat_Academy_Learner_Badge.pdf"
+                            download="Red_Hat_Academy_Learner_Badge.pdf"
+                            aria-label="Download Program Learner certificate">
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+                    </article>
+
+                </div>
+            </section>
+
+            <section>
+                <div class="section-label">06 / Publication</div>
+                <h2 class="section-title">An academic background that complements the technology.</h2>
+
+                <article class="publication">
+                    <h3>Det finns nackdelar med friheten <span lang="en">(“There are downsides to freedom”)</span></h3>
+                    <p>
+                        Linnaeus University · 2020. Qualitative study (in Swedish) of how civic
+                        communicators in six municipalities interpret the law on civic orientation
+                        for newly arrived immigrants.
+                    </p>
+                </article>
+            </section>
+
+            <section id="kontakt">
+                <div class="contact-card">
+                    <div class="section-label">07 / Contact</div>
+
+                    <h2>Ready to build the next platform together?</h2>
+
+                    <p>
+                        I'm looking for roles and collaborations in DevOps, Platform Engineering,
+                        Cloud and SRE. Get in touch about an opportunity or a technical project.
+                    </p>
+
+                    <div class="contact-buttons">
+                        <a class="button button-primary" href="mailto:arash_rahimi92@hotmail.com">
+                            <i class="fa-solid fa-envelope"></i>
+                            Contact me
+                        </a>
+
+                        <a
+                            class="button button-secondary"
+                            href="./assets/CV_Arash_Rahimi_EN.pdf"
+                            download="CV_Arash_Rahimi_EN.pdf">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            Download CV
+                        </a>
+
+                        <a
+                            class="button button-secondary"
+                            href="https://github.com/arash00009"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            © 2026 Arash Rahimi · DevOps / Platform Engineering
+        </div>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById("menuButton");
+        const navLinks = document.getElementById("navLinks");
+
+        menuButton.addEventListener("click", function () {
+            navLinks.classList.toggle("open");
+        });
+
+        document.querySelectorAll(".nav-links a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("open");
+            });
+        });
+    </script>
+
+</body>
+</html>
