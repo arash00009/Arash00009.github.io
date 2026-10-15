@@ -10,7 +10,7 @@ I graduated as a DevOps Engineer from Lernia Yrkeshögskola in June 2026. During
 
 Before IT I have a BA in sociology from Linnaeus University and almost three years as a career counsellor in Uppvidinge and Alvesta, so I'm used to explaining technical things to people who aren't engineers.
 
-I'm looking for a junior DevOps, Platform or SRE role in Skåne, Copenhagen or elsewhere in the Nordics.
+I'm looking for a junior DevOps, Platform or SRE role. I live in Skåne, move to Alvesta in January 2027, and I'm ready to relocate wherever the job is. Remote works too.
 
 ## Projects
 
@@ -46,4 +46,5 @@ I'm looking for a junior DevOps, Platform or SRE role in Skåne, Copenhagen or e
 
 - Email: arash_rahimi92@hotmail.com
 - LinkedIn: [linkedin.com/in/arash-rahimi92](https://www.linkedin.com/in/arash-rahimi92)
-- Location: Landskrona, Sweden
+- Phone: +46 70 091 62 69
+- Location: Skåne, Sweden (Alvesta from January 2027), ready to relocate
