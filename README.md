@@ -1,4 +1,4 @@
-# Arash Rahimi · DevOps / Platform Engineer
+# Arash Rahimi · Junior DevOps Engineer
 
 Source code for my portfolio site: **[arash00009.github.io](https://arash00009.github.io)**
 
